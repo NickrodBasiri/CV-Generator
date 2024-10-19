@@ -1,5 +1,7 @@
 import { useState } from "react";
-import Information from "./components/information";
+import GenericInfo from "./components/genericInfo";
+import Display from "./components/display";
+import './styles/app.css'
 
 function App() {
     const [name, setName] = useState("");
@@ -8,16 +10,22 @@ function App() {
 
     return (
         <>
-        <Information 
-        name={name} 
-        setName={setName}
-        
-        email={email}
-        setEmail={setEmail}
-
-        phone={phone}
-        setPhone={setPhone}
-        />
+        <div id="body">
+            <GenericInfo
+            name={name}
+            setName={setName}
+            
+            email={email}
+            setEmail={setEmail}
+            phone={phone}
+            setPhone={setPhone}
+            />
+            <Display
+            name={name}
+            email={email}
+            phone={phone}
+            />
+        </div>
         </>
     );
 }
