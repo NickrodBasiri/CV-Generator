@@ -1,19 +1,6 @@
-import { useEffect } from 'react'
 import '../styles/display.css'
 
 export default function Display({name, email, phone, education}) {
-    console.log(education);
-    // useEffect(() => {
-    //     for (let i = 0; i < education.length; i++) {
-    //         const educationCard = document.createElement("div");
-    //         const schoolName = document.createElement("h1");
-    //         schoolName.innerText = education[i].schoolName;
-    //         educationCard.appendChild(schoolName);
-
-    //         const educationDiv = document.querySelector("#education-info");
-    //         educationDiv.appendChild(educationCard);
-    //     }
-    // });
 
     return (
         <>

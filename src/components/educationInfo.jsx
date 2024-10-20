@@ -20,7 +20,3 @@ export default function EducationInfo( {education, setEducation} ) {
         </>
     )
 }
-
-// form submit 
-//      create object with form values
-//          display object created
