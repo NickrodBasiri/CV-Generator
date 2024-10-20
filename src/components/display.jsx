@@ -1,7 +1,10 @@
 import '../styles/display.css'
 
-export default function Display({name, email, phone, education}) {
+export default function Display({name, email, phone, education, setEducation}) {
 
+    const removeEducation = (schoolName) => {
+        setEducation(education.filter((edu) => edu.schoolName !== schoolName));
+    }
     return (
         <>
         <div id="CV">
@@ -13,9 +16,15 @@ export default function Display({name, email, phone, education}) {
                 </div>
             </div>
             <div id="education-info">
-                {education.map((edu, index) => (
-                    <div key={index} className="education-card">
-                        <h1>{edu.schoolName}</h1>
+                <h1>Education</h1>
+                {education.map((edu) => (
+                    <div key={edu.schoolName} className="education-card">
+                        <div id="top">
+                            <h1>{edu.schoolName}</h1>
+                            <h1>{edu.date}</h1>
+                        </div>
+                        <h1>{edu.program}</h1>
+                        <button onClick={() => removeEducation(edu.schoolName)}>Remove</button>
                     </div>
                 ))}
             </div>

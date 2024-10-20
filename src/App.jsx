@@ -30,6 +30,7 @@ function App() {
             email={email}
             phone={phone}
             education={education}
+            setEducation={setEducation}
             />
         </div>
         </>
