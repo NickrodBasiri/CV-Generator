@@ -1,13 +1,20 @@
+import { useState } from "react";
+
 export default function EducationForm( {education, setEducation}) {
     
+    const [edit, setEdit] = useState(false);
+    const [index, setIndex] = useState(0);
+
     const editEducation = (id) => {
+        setEdit(true);
+        setIndex(education.findIndex((edu) => edu.id == id));
         const myObject = education.find((edu) => edu.id == id);
         document.querySelector("#school-name").value = myObject.schoolName;
         document.querySelector("#date").value = myObject.date;
         document.querySelector("#program").value = myObject.program;
         console.log(myObject);
     }
-    
+
     return (
         <>
             <form id="educationInfo" onSubmit={(event) => {
@@ -18,10 +25,18 @@ export default function EducationForm( {education, setEducation}) {
                     schoolName: data.get("school-name"),
                     date: data.get("date"),
                     program: data.get("program"),
-                    id: Date.now(),
+                    id: edit ? education[index].id : Date.now(),
                 }
-
-                setEducation([...education, newEducation]);
+                if (!edit) {
+                    setEducation([...education, newEducation]);
+                } else {
+                    const updatedEducation = education.map((edu, i) => 
+                        i === index ? newEducation : edu
+                    );
+                    setEducation(updatedEducation);                    
+                    console.log(education);
+                }
+                setEdit(false);
                 form.reset();
             }}>
                 <div id="education-form">
