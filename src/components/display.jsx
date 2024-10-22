@@ -30,7 +30,7 @@ export default function Display({name, email, phone, education, experience}) {
                     <div key={exp.id} className="experience-card">
                         <div id="top">
                             <h1>{exp.jobName}</h1>
-                            <h1>{exp.date}</h1>
+                            <h1>{exp.startDate} - {exp.endDate}</h1>
                         </div>
                         <h1>{exp.responsibilities}</h1>
                     </div>

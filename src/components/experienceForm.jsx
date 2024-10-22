@@ -14,7 +14,8 @@ export default function ExperienceForm( {experience, setExperience}) {
         setIndex(experience.findIndex((exp) => exp.id == id));
         const myObject = experience.find((exp) => exp.id == id);
         document.querySelector("#job-name").value = myObject.jobName;
-        document.querySelector("#date").value = myObject.date;
+        document.querySelector("#startDate").value = myObject.startDate;
+        document.querySelector("#endDate").value = myObject.endDate;
         document.querySelector("#responsibilities").value = myObject.responsibilities;
         console.log(myObject);
     }
@@ -27,7 +28,8 @@ export default function ExperienceForm( {experience, setExperience}) {
                 const data = new FormData(event.target);
                 const newExperience = {
                     jobName: data.get("job-name"),
-                    date: data.get("date"),
+                    startDate: data.get("startDate"),
+                    endDate: data.get("endDate"),
                     responsibilities: data.get("responsibilities"),
                     id: edit ? experience[index].id : Date.now(),
                 }
@@ -48,9 +50,15 @@ export default function ExperienceForm( {experience, setExperience}) {
                         <label htmlFor="job-name">Job Name</label>
                         <input type="text" id="job-name" name="job-name"/>
                     </div>
-                    <div className="input">
-                        <label htmlFor="date">Date of Work</label>
-                        <input type="text" id="date" name="date"/>
+                    <div id="dateBox">
+                        <div className="input">
+                            <label htmlFor="startDate">Start Date</label>
+                            <input type="text" id="startDate" name="startDate"/>
+                        </div>
+                        <div className="input">
+                            <label htmlFor="endDate">End Date</label>
+                            <input type="text" id="endDate" name="endDate"/>
+                        </div>
                     </div>
                     <div className="input">
                         <label htmlFor="responsibilities">Responsibilities</label>
