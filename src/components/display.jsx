@@ -5,7 +5,7 @@ export default function Display({name, email, phone, education, setEducation}) {
     const removeEducation = (id) => {
         setEducation(education.filter((edu) => edu.id !== id));
     }
-      
+    
     return (
         <>
         <div id="CV">
