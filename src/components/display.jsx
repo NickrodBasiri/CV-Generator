@@ -13,7 +13,7 @@ export default function Display({name, email, phone, education, experience}) {
                 </div>
             </div>
             <div id="education-info">
-                <h1>Education</h1>
+                {education.length > 0 && <h1 className="title">Education</h1>}
                 {education.map((edu) => (
                     <div key={edu.id} className="education-card">
                         <div id="top">
@@ -25,7 +25,7 @@ export default function Display({name, email, phone, education, experience}) {
                 ))}
             </div>
             <div id="experience-info">
-                <h1>Experience</h1>
+                {experience.length > 0 && <h1 className="title">Experience</h1>}
                 {experience.map((exp) => (
                     <div key={exp.id} className="experience-card">
                         <div id="top">
