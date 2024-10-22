@@ -3,6 +3,7 @@ import GenericInfo from "./components/genericInfo";
 import Display from "./components/display";
 import EducationInfo from "./components/educationInfo";
 import './styles/app.css'
+import ExperienceInfo from "./components/experienceInfo";
 
 function App() {
     // Personal Info states
@@ -11,8 +12,13 @@ function App() {
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
 
-    const [educationDisplay, setEducationDisplay] = useState(false)
+    // Education info states
     const [education = [], setEducation] = useState([]);
+    const [educationDisplay, setEducationDisplay] = useState(false);
+
+    // Experience info states
+    const [experience, setExperience] = useState([]);
+    const  [experienceDisplay, setExperienceDisplay] = useState(false);
     return (
         <>
         <div id="body">
@@ -32,13 +38,18 @@ function App() {
                 setEducation={setEducation}
                 educationDisplay={educationDisplay}
                 setEducationDisplay={setEducationDisplay}/>
+                <ExperienceInfo
+                experience={experience}
+                setExperience={setExperience}
+                experienceDisplay={experienceDisplay}
+                setExperienceDisplay={setExperienceDisplay}/>
             </div>
             <Display
             name={name}
             email={email}
             phone={phone}
             education={education}
-            setEducation={setEducation}
+            experience={experience}
             />
         </div>
         </>

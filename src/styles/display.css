@@ -35,6 +35,12 @@ h1 {
     padding: 16px;
 }
 
+#experience-info {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+
 #top {
     display: flex;
     justify-content: space-between;
