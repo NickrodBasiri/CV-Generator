@@ -13,6 +13,13 @@
     padding: 16px;
 }
 
+#jobBox {
+    display: flex;
+    width: 30vw;
+    gap: 32px;
+    justify-content: space-between;
+}
+
 .input {
     display: flex;
     flex-direction: column;

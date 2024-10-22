@@ -14,6 +14,7 @@ export default function ExperienceForm( {experience, setExperience}) {
         setIndex(experience.findIndex((exp) => exp.id == id));
         const myObject = experience.find((exp) => exp.id == id);
         document.querySelector("#job-name").value = myObject.jobName;
+        document.querySelector("#company-name").value = myObject.companyName;
         document.querySelector("#startDate").value = myObject.startDate;
         document.querySelector("#endDate").value = myObject.endDate;
         document.querySelector("#responsibilities").value = myObject.responsibilities;
@@ -28,6 +29,7 @@ export default function ExperienceForm( {experience, setExperience}) {
                 const data = new FormData(event.target);
                 const newExperience = {
                     jobName: data.get("job-name"),
+                    companyName: data.get("company-name"),
                     startDate: data.get("startDate"),
                     endDate: data.get("endDate"),
                     responsibilities: data.get("responsibilities"),
@@ -46,9 +48,15 @@ export default function ExperienceForm( {experience, setExperience}) {
                 form.reset();
             }}>
                 <div id="experience-form">
-                    <div className="input">
-                        <label htmlFor="job-name">Job Name</label>
-                        <input type="text" id="job-name" name="job-name"/>
+                    <div id="jobBox">
+                        <div className="input">
+                            <label htmlFor="job-name">Job Name</label>
+                            <input type="text" id="job-name" name="job-name"/>
+                        </div>
+                        <div className="input">
+                            <label htmlFor="company-name">Company</label>
+                            <input type="text" id="company-name" name="company-name"/>
+                        </div>
                     </div>
                     <div id="dateBox">
                         <div className="input">
