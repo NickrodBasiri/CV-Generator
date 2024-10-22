@@ -1,11 +1,7 @@
 import '../styles/display.css'
 
-export default function Display({name, email, phone, education, setEducation}) {
- 
-    const removeEducation = (id) => {
-        setEducation(education.filter((edu) => edu.id !== id));
-    }
-    
+export default function Display({name, email, phone, education}) {
+     
     return (
         <>
         <div id="CV">
@@ -25,7 +21,6 @@ export default function Display({name, email, phone, education, setEducation}) {
                             <h1>{edu.date}</h1>
                         </div>
                         <h1>{edu.program}</h1>
-                        <button onClick={() => removeEducation(edu.id)}>Remove</button>
                     </div>
                 ))}
             </div>

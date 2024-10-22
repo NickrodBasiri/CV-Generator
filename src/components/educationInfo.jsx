@@ -6,7 +6,7 @@ export default function EducationInfo( {education, setEducation, educationDispla
     }
     return (
         <>
-        <button onClick={handleDisplay}>Open seseme</button>
+        <button onClick={handleDisplay}>Education</button>
         {educationDisplay && (
             <EducationForm
             education={education}

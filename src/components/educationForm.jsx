@@ -5,6 +5,10 @@ export default function EducationForm( {education, setEducation}) {
     const [edit, setEdit] = useState(false);
     const [index, setIndex] = useState(0);
 
+    const removeEducation = (id) => {
+        setEducation(education.filter((edu) => edu.id !== id));
+    }
+
     const editEducation = (id) => {
         setEdit(true);
         setIndex(education.findIndex((edu) => edu.id == id));
@@ -57,8 +61,10 @@ export default function EducationForm( {education, setEducation}) {
             </form>
             <div id="editButtons">
             {education.map((edu) => (
-                    <div key={edu.id} className="education-edit-card" id={edu.id} onClick={() => editEducation(edu.id)}>
+                    <div key={edu.id} className="education-edit-card" id={edu.id}>
                         <h1>{edu.schoolName}</h1>
+                        <button onClick={() => editEducation(edu.id)}>Edit</button>
+                        <button onClick={() => removeEducation(edu.id)}>Remove</button>
                     </div>
                 ))}
             </div>
