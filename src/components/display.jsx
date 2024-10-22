@@ -18,7 +18,7 @@ export default function Display({name, email, phone, education, experience}) {
                     <div key={edu.id} className="education-card">
                         <div id="top">
                             <h1>{edu.schoolName}</h1>
-                            <h1>{edu.date}</h1>
+                            <h1>{edu.startDate} - {edu.endDate}</h1>
                         </div>
                         <h1>{edu.program}</h1>
                     </div>

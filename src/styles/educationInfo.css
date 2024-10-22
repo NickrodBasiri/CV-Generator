@@ -24,3 +24,10 @@
 input {
     height: 3em;
 }
+
+#dateBox {
+    display: flex;
+    width: 30vw;
+    gap: 32px;
+    justify-content: space-between;
+}

@@ -14,7 +14,8 @@ export default function EducationForm( {education, setEducation}) {
         setIndex(education.findIndex((edu) => edu.id == id));
         const myObject = education.find((edu) => edu.id == id);
         document.querySelector("#school-name").value = myObject.schoolName;
-        document.querySelector("#date").value = myObject.date;
+        document.querySelector("#startDate").value = myObject.startDate;
+        document.querySelector("#endDate").value = myObject.endDate;
         document.querySelector("#program").value = myObject.program;
         console.log(myObject);
     }
@@ -27,7 +28,8 @@ export default function EducationForm( {education, setEducation}) {
                 const data = new FormData(event.target);
                 const newEducation = {
                     schoolName: data.get("school-name"),
-                    date: data.get("date"),
+                    startDate: data.get("startDate"),
+                    endDate: data.get("endDate"),
                     program: data.get("program"),
                     id: edit ? education[index].id : Date.now(),
                 }
@@ -48,9 +50,15 @@ export default function EducationForm( {education, setEducation}) {
                         <label htmlFor="school-name">School Name</label>
                         <input type="text" id="school-name" name="school-name"/>
                     </div>
-                    <div className="input">
-                        <label htmlFor="date">Date of Study</label>
-                        <input type="text" id="date" name="date"/>
+                    <div id="dateBox">
+                        <div className="input">
+                            <label htmlFor="startDate">Start Date</label>
+                            <input type="text" id="startDate" name="startDate"/>
+                        </div>
+                        <div className="input">
+                            <label htmlFor="endDate">End Date</label>
+                            <input type="text" id="endDate" name="endDate"/>
+                        </div>
                     </div>
                     <div className="input">
                         <label htmlFor="program">Field of Study</label>
