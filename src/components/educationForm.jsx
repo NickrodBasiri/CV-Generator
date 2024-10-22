@@ -1,4 +1,13 @@
 export default function EducationForm( {education, setEducation}) {
+    
+    const editEducation = (id) => {
+        const myObject = education.find((edu) => edu.id == id);
+        document.querySelector("#school-name").value = myObject.schoolName;
+        document.querySelector("#date").value = myObject.date;
+        document.querySelector("#program").value = myObject.program;
+        console.log(myObject);
+    }
+    
     return (
         <>
             <form id="educationInfo" onSubmit={(event) => {
@@ -33,9 +42,8 @@ export default function EducationForm( {education, setEducation}) {
             </form>
             <div id="editButtons">
             {education.map((edu) => (
-                    <div key={edu.id} className="education-edit-card">
+                    <div key={edu.id} className="education-edit-card" id={edu.id} onClick={() => editEducation(edu.id)}>
                         <h1>{edu.schoolName}</h1>
-                        <button>Edit {edu.schoolName} education</button>
                     </div>
                 ))}
             </div>

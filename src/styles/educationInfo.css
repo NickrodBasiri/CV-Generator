@@ -7,6 +7,12 @@
     padding: 16px;
 }
 
+.education-edit-card {
+    width: 30vw;
+    border: 2px solid black;
+    padding: 16px;
+}
+
 .input {
     display: flex;
     flex-direction: column;
