@@ -47,7 +47,7 @@ export default function ExperienceForm( {experience, setExperience}) {
             }}>
                 <div id="experience-form">
                     <div className="input">
-                        <label htmlFor="job-name">Job Name</label>
+                        <label htmlFor="job-name">Position</label>
                         <input type="text" id="job-name" name="job-name"/>
                     </div>
                     <div className="input">
