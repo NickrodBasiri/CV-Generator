@@ -2,7 +2,9 @@
     display: flex;
     justify-content: space-evenly;
     max-height: 11in;
-    background-color: white;
+    background-color: whitesmoke;
+    margin: -8px;
+    padding: 8px;
 }
 
 #inputs {
@@ -12,10 +14,11 @@
     flex-direction: column;
     gap: 8px;
     align-items: center;
-    border: 2px solid lightgray;
     border-radius: 8px;
     overflow: auto;
     max-height: 11in;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
 h1 {
@@ -50,7 +53,7 @@ form {
     height: 3em;
     width: 12em;
     background-color: white;
-    border: 1px solid lightgrey;
+    border: none;
     border-radius: 32px;
     display: flex;
     justify-content: center;
@@ -59,9 +62,11 @@ form {
     margin-top: 8px;
     font-size: 16px;
     font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
 #download:hover {
     background-color: rgb(19, 70, 102);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     color: white;
 }

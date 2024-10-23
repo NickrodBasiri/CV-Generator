@@ -19,6 +19,6 @@ input {
     font-size: 16px;
     padding: 10px;
     box-sizing: border-box;
-    border: 1px solid lightgrey;
+    background-color: rgb(238, 238, 238);
     border-radius: 8px;
 }
