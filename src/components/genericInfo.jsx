@@ -1,7 +1,7 @@
 import '../styles/genericInfo.css';
 import PersonalForm from './personalForm';
 
-export default function GenericInfo({ name, setName, email, setEmail, phone, setPhone, linkedIn, setLinkedIn, github, setGithub, personalDisplay, setPersonalDisplay }) {
+export default function GenericInfo({ name, setName, email, setEmail, phone, setPhone, personalDisplay, setPersonalDisplay }) {
     const handleDisplay = () => {
         setPersonalDisplay(!personalDisplay);
     }
@@ -15,11 +15,7 @@ export default function GenericInfo({ name, setName, email, setEmail, phone, set
             email={email}
             setEmail={setEmail}
             phone={phone}
-            setPhone={setPhone}
-            linkedIn={linkedIn}
-            setLinkedIn={setLinkedIn}
-            github={github}
-            setGithub={setGithub}/>
+            setPhone={setPhone}/>
         )}
         </>
     );
