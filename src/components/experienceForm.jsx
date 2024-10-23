@@ -74,7 +74,7 @@ export default function ExperienceForm( {experience, setExperience}) {
             <div id="editButtons">
             {experience.map((exp) => (
                     <div key={exp.id} className="experience-edit-card" id={exp.id}>
-                        <h1>{exp.jobName}</h1>
+                        <h1>{exp.companyName}</h1>
                         <div>
                             <button className="editButton" onClick={() => editExperience(exp.id)}><i className="fa-pen-to-square fa-solid"></i></button>
                             <button className="removeButton" onClick={() => removeExperience(exp.id)}><i className="fa-solid fa-trash"></i></button>
