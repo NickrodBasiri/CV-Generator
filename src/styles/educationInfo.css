@@ -25,7 +25,7 @@ input {
     height: 3em;
 }
 
-#dateBox {
+.duoInput {
     display: flex;
     width: 30vw;
     gap: 32px;

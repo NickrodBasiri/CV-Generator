@@ -11,6 +11,8 @@ function App() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
+    const [linkedIn, setLinkedIn] = useState("");
+    const [github, setGithub] = useState("");
 
     // Education info states
     const [education = [], setEducation] = useState([]);
@@ -30,6 +32,10 @@ function App() {
                 setEmail={setEmail}
                 phone={phone}
                 setPhone={setPhone}
+                linkedIn={linkedIn}
+                setLinkedIn={setLinkedIn}
+                github={github}
+                setGithub={setGithub}
                 personalDisplay={personalDisplay}
                 setPersonalDisplay={setPersonalDisplay}
                 />
@@ -48,6 +54,8 @@ function App() {
             name={name}
             email={email}
             phone={phone}
+            linkedIn={linkedIn}
+            github={github}
             education={education}
             experience={experience}
             />

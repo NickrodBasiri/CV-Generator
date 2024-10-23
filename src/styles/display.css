@@ -24,9 +24,17 @@ h1 {
 
 #contact-info {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    gap: 8px;
     font-size: 8px;
+}
+
+a {
+    color:inherit;
+}
+
+.name {
+    font-weight: bold;
 }
 
 #education-info {
@@ -44,8 +52,48 @@ h1 {
 #top {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
 }
 
 .title {
+    font-size: 40px;
     margin-bottom: 8px;
 }
+
+.schoolTitle {
+    font-weight: bold;
+}
+
+.schoolLocation {
+    font-size: 16px;
+}
+
+.educationDate, .jobDate {
+    font-size: 16px;
+}
+
+.educationProgram {
+    font-size: 24px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: black;
+    margin-top: -8px;
+    width: 100%;
+}
+
+.companyName {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.jobName {
+    font-weight: bold;
+}
+
+.jobTasks {
+    font-size: 24px;
+}
+

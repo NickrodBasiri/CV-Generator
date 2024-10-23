@@ -18,7 +18,6 @@ export default function ExperienceForm( {experience, setExperience}) {
         document.querySelector("#startDate").value = myObject.startDate;
         document.querySelector("#endDate").value = myObject.endDate;
         document.querySelector("#responsibilities").value = myObject.responsibilities;
-        console.log(myObject);
     }
 
     return (
@@ -42,23 +41,20 @@ export default function ExperienceForm( {experience, setExperience}) {
                         i === index ? newExperience : exp
                     );
                     setExperience(updatedExperience);                    
-                    console.log(experience);
                 }
                 setEdit(false);
                 form.reset();
             }}>
                 <div id="experience-form">
-                    <div id="jobBox">
-                        <div className="input">
-                            <label htmlFor="job-name">Job Name</label>
-                            <input type="text" id="job-name" name="job-name"/>
-                        </div>
-                        <div className="input">
-                            <label htmlFor="company-name">Company</label>
-                            <input type="text" id="company-name" name="company-name"/>
-                        </div>
+                    <div className="input">
+                        <label htmlFor="job-name">Job Name</label>
+                        <input type="text" id="job-name" name="job-name"/>
                     </div>
-                    <div id="dateBox">
+                    <div className="input">
+                        <label htmlFor="company-name">Company</label>
+                        <input type="text" id="company-name" name="company-name"/>
+                    </div>
+                    <div className="duoInput">
                         <div className="input">
                             <label htmlFor="startDate">Start Date</label>
                             <input type="text" id="startDate" name="startDate"/>
@@ -69,7 +65,7 @@ export default function ExperienceForm( {experience, setExperience}) {
                         </div>
                     </div>
                     <div className="input">
-                        <label htmlFor="responsibilities">Responsibilities</label>
+                        <label htmlFor="responsibilities">Description</label>
                         <input type="text" id="responsibilities" name="responsibilities"/>
                     </div>
                     <button type="submit">Submit</button>

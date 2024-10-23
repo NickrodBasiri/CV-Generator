@@ -17,6 +17,7 @@ export default function EducationForm( {education, setEducation}) {
         document.querySelector("#startDate").value = myObject.startDate;
         document.querySelector("#endDate").value = myObject.endDate;
         document.querySelector("#program").value = myObject.program;
+        document.querySelector("#location").value = myObject.location;
         console.log(myObject);
     }
 
@@ -31,6 +32,7 @@ export default function EducationForm( {education, setEducation}) {
                     startDate: data.get("startDate"),
                     endDate: data.get("endDate"),
                     program: data.get("program"),
+                    location: data.get("location"),
                     id: edit ? education[index].id : Date.now(),
                 }
                 if (!edit) {
@@ -50,7 +52,11 @@ export default function EducationForm( {education, setEducation}) {
                         <label htmlFor="school-name">School Name</label>
                         <input type="text" id="school-name" name="school-name"/>
                     </div>
-                    <div id="dateBox">
+                    <div className="input">
+                            <label htmlFor="program">Degree</label>
+                            <input type="text" id="program" name="program"/>
+                        </div>
+                    <div className="duoInput">
                         <div className="input">
                             <label htmlFor="startDate">Start Date</label>
                             <input type="text" id="startDate" name="startDate"/>
@@ -60,10 +66,10 @@ export default function EducationForm( {education, setEducation}) {
                             <input type="text" id="endDate" name="endDate"/>
                         </div>
                     </div>
-                    <div className="input">
-                        <label htmlFor="program">Field of Study</label>
-                        <input type="text" id="program" name="program"/>
-                    </div>
+                        <div className="input">
+                            <label htmlFor="location">Location</label>
+                            <input type="text" id="location" name="location"/>
+                        </div>
                     <button type="submit">Submit</button>
                 </div>
             </form>
