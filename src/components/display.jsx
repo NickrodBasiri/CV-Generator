@@ -8,10 +8,10 @@ export default function Display({name, email, phone, linkedIn, github, education
             <div id="header">
                 <h1 className='name'>{name}</h1>
                 <div id="contact-info">
-                    <h1>{email}</h1>
-                    <h1>{phone}</h1>
-                    <h1><a href={linkedIn}>{linkedIn}</a></h1>
-                    <h1><a href={github}>{github}</a></h1>
+                    <h1>{email ? <i className="fa-envelope fa-regular"></i> : ""} {email}</h1>
+                    <h1>{phone ? <i className="fa-phone fa-solid"></i> : ""} {phone}</h1>
+                    <h1><a href={linkedIn}>{linkedIn ? <i className="fa-brands fa-linkedin"></i> : ""}{linkedIn ? " LinkedIn" : ""}</a></h1>
+                    <h1><a href={github}>{github ? <i className="fa-brands fa-github"></i> : ""} {github ? "Github" : ""}</a></h1>
                 </div>
             </div>
             <div id="education-info">

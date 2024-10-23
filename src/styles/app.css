@@ -1,14 +1,40 @@
 #body {
     display: flex;
     justify-content: space-evenly;
+    max-height: 11in;
 }
 
 #inputs {
     display: flex;
+    width: 30vw;
+    height: 100%;
     flex-direction: column;
     gap: 8px;
+    align-items: center;
+    border: 2px solid lightgray;
+    border-radius: 8px;
+    overflow: auto;
+    max-height: 11in;
 }
 
 h1 {
     font-weight: normal;
+}
+
+.inputButton {
+    all: unset;
+    text-align: center;
+    width: 30vw;
+    height: 6vh;
+    font-size: 32px;
+    font-family: 'Roboto'
+}
+
+.inputButton:hover {
+    background-color: rgb(19, 70, 102);
+    color: white;
+}
+
+form {
+    font-family: 'Roboto';
 }

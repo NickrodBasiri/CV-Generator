@@ -70,15 +70,17 @@ export default function EducationForm( {education, setEducation}) {
                             <label htmlFor="location">Location</label>
                             <input type="text" id="location" name="location"/>
                         </div>
-                    <button type="submit">Submit</button>
+                    <button className="submitButton" type="submit"><i className="fa-plus fa-solid"></i></button>
                 </div>
             </form>
             <div id="editButtons">
             {education.map((edu) => (
                     <div key={edu.id} className="education-edit-card" id={edu.id}>
                         <h1>{edu.schoolName}</h1>
-                        <button onClick={() => editEducation(edu.id)}>Edit</button>
-                        <button onClick={() => removeEducation(edu.id)}>Remove</button>
+                        <div>
+                            <button className="editButton" onClick={() => editEducation(edu.id)}><i className="fa-pen-to-square fa-solid"></i></button>
+                            <button className="removeButton" onClick={() => removeEducation(edu.id)}><i className="fa-solid fa-trash"></i></button>
+                        </div>
                     </div>
                 ))}
             </div>

@@ -7,7 +7,7 @@ export default function ExperienceInfo( {experience, setExperience, experienceDi
     }
     return (
         <>
-        <button onClick={handleDisplay}>Experience</button>
+        <button className='inputButton' onClick={handleDisplay}>Experience</button>
         {experienceDisplay && (
             <ExperienceForm
             experience={experience}

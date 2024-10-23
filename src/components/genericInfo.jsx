@@ -7,7 +7,7 @@ export default function GenericInfo({ name, setName, email, setEmail, phone, set
     }
     return (
         <>
-        <button onClick={handleDisplay}>Personal Information</button>
+        <button className='inputButton' onClick={handleDisplay}>Personal Information</button>
         { personalDisplay && (    
             <PersonalForm
             name={name}

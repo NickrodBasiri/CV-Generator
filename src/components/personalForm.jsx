@@ -1,7 +1,6 @@
 export default function PersonalForm({name, setName, email, setEmail, phone, setPhone, linkedIn, setLinkedIn, github, setGithub}) {
     return (
-        <form>
-        <div id="personal-info">
+        <form id="personal-info">
             <div className="input">
                 <label htmlFor="name">Full Name</label>
                 <input type="text" value={name} onChange={(event) => setName(event.target.value)}/>
@@ -22,7 +21,6 @@ export default function PersonalForm({name, setName, email, setEmail, phone, set
                 <label htmlFor="github">Github</label>
                 <input type="text" value={github} onChange={(event) => setGithub(event.target.value)}/>
             </div>
-        </div>
-    </form>
+        </form>
     )
 }
